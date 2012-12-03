@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Insert title here</title>
+</head>
+<body>
+	<input id="btn" type="button" value="调用java接口" />
+	本地html页面
+	<video id="my_video_1" style="border:1px solid;" class="video-js vjs-default-skin" controls
+		preload="auto" width="320" height="264" data-setup="{}">
+		<source src="http://10.10.6.78/videos/b.mp4" type="video/mp4"></source>
+		<source src="http://10.10.6.78/videos/aa.webm" type="video/webm"></source>
+		<source src="http://10.10.6.78/videos/aa.ogv" type="video/ogg"></source>
+		不支持
+	</video>
+	<input type="text" value="">
+	<script type="text/javascript">
+		function showToast(msg){
+			Android.showToast(msg);
+		}
+		
+		function java2js(){
+			alert("java调用js");
+		}
+		
+		document.getElementById('btn').addEventListener('click',function(e){
+			showToast('clicked...');
+		});
+	</script>
+</body>
+</html>
